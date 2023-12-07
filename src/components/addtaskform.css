@@ -1,0 +1,57 @@
+/* AddTaskForm.css */
+
+/* Define colors from the provided palette */
+:root {
+  --soft-blue: #6FA3EF;
+  --soft-green: #A4D65E;
+  --warm-neutral: #E5E5E5;
+  --coral: #FFA07A;
+}
+
+.add-task-form {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--warm-neutral);
+  border: 1px solid var(--warm-neutral); /* Updated to Warm Neutral */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+}
+
+.add-task-form input{
+  background-color: #FFFFFF;
+  margin-top: 10px;
+}
+.add-task-form select{
+  background-color: #FFFFFF;
+}
+.add-task-form button {
+  margin-bottom: 10px; /* Add some space between elements on small screens */
+  margin-right: 10px;
+  padding: 10px;
+  color:#FFFFFF;
+  font-weight: bold;
+  border: 1px solid var(--warm-neutral); /* Updated to Warm Neutral */
+  border-radius: 4px;
+  flex: 1; /* Take up the available width */
+}
+
+.add-task-form button {
+  background-color: #45a049;
+}
+
+.add-task-form select {
+  margin-right: 0; /* Remove margin on the right for better alignment */
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  /* Styles for tablets and small laptops */
+  .add-task-form input,
+  .add-task-form select,
+  .add-task-form button {
+    flex: 100%; /* Full width on small screens */
+  }
+}

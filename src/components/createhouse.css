@@ -1,0 +1,56 @@
+.create-house {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    width: 80%; /* Adjust the width based on your design */
+    display: flex;
+    flex-direction: column; /* Arrange child elements in a column */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-house-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-house-btn:disabled {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+  }
+  
+  .create-house-btn:hover:enabled {
+    background-color: #45a049;
+  }
+  
+  /* Media query for phones */
+  @media (max-width: 480px) {
+    form {
+      margin-left: 10px; /* Adjust the left margin for smaller screens */
+      margin-right: 10px; /* Adjust the right margin for smaller screens */
+    }
+    input {
+        width: 60%;
+    }
+  }
+  

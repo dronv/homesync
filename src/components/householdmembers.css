@@ -1,0 +1,63 @@
+/* HouseholdMembers.css */
+
+/* Define colors from the provided palette */
+:root {
+  --soft-blue: #6FA3EF;
+  --soft-green: #A4D65E;
+  --warm-neutral: #E5E5E5;
+  --coral: #FFA07A;
+}
+
+.household-members-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff; /* Using a neutral background for the container */
+  border: 1px solid var(--soft-blue); /* Border color updated to Soft Blue */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.household-members-title {
+  color: var(--soft-green);
+}
+
+.household-members-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.household-member-item {
+  background-color: var(--soft-blue); /* Updated to Soft Blue */
+  border: 1px solid var(--warm-neutral);
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  color: #333; /* Text color for better contrast */
+}
+
+.add-member-form {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-member-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--warm-neutral);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.add-member-button {
+  background-color: var(--soft-blue);
+  color: #fff;
+  padding: 10px;
+  border: 1px solid var(--soft-blue);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: var(--coral);
+}
