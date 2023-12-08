@@ -9,6 +9,7 @@ const HouseholdMembers = ({ membersList, setMembersList, house_id }) => {
   const [listFetched, setListFetched] = useState(false);
   const [memberExists, setMemberExists] = useState(false)
   useEffect(() => {
+    if(house_id != null){
     const fetchMembersList = async () => {
       const membersListQuery = query(collection(db, 'users'), where('house_id', '==', house_id));
       const membersSnapshot = await getDocs(membersListQuery);
@@ -18,11 +19,14 @@ const HouseholdMembers = ({ membersList, setMembersList, house_id }) => {
     };
 
     fetchMembersList();
+  }
+  else {
+    setError("You are not a member of any house! Create a house or join other house group.");
+  }
   }, [house_id, listFetched, setMembersList]);
   
   const handleAddMember = async () => {
     if (house_id == null) {
-      setError("not a member of any house");
       return;
     }
   
@@ -31,15 +35,15 @@ const HouseholdMembers = ({ membersList, setMembersList, house_id }) => {
   
     if (!userSnapshot.empty) {
       const userDoc = userSnapshot.docs[0];
-      const houseId = userDoc.data().house_id;
       const newMemberId = userDoc.id;
   
-      const houseDocRef = doc(db, 'houses', house_id);
-      await updateDoc(houseDocRef, {
-        members: arrayUnion(newMemberId),
-      });
+      // Check if the user is already a member of the current house
+      if (!membersList.some(member => member.id === newMemberId)) {
+        const houseDocRef = doc(db, 'houses', house_id);
+        await updateDoc(houseDocRef, {
+          members: arrayUnion(newMemberId),
+        });
   
-      if (houseId == null) {
         const userDocRef = doc(db, 'users', newMemberId);
         await updateDoc(userDocRef, {
           house_id: house_id,
@@ -54,6 +58,7 @@ const HouseholdMembers = ({ membersList, setMembersList, house_id }) => {
             ...userDoc.data(),
           },
         ]);
+  
         setNewMember("");
         setError("");
       } else {

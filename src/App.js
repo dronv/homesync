@@ -55,12 +55,12 @@ function App() {
         }
 
         // Perform the membership check
-        checkMembership();
+        await checkMembership();
       } else {
         setUser(null);
         setHouseName(null);
         setHouseId(null);
-        setTasks(null);
+        setTasks([]);
       }
     });
 
@@ -73,11 +73,9 @@ function App() {
   useEffect(() => {
     const checkRedirectResult = async () => {
       try {
-        const result = await getRedirectResult(auth);
-        const user = result.user;
-
         if (user) {
           // Check if the user is new or existing
+          
           const userRef = doc(db, 'users', user.uid);
           const userDoc = await getDoc(userRef);
 
@@ -144,7 +142,7 @@ function App() {
           <nav>
             <ul>
               <li className="logo" style={{"color":"#2f2626"}}> 
-                <NavLink  disabled="true" to="/">HomeSync</NavLink>
+                <NavLink to="/">HomeSync</NavLink>
               </li>
               <li>
                 <NavLink to="/">Dashboard</NavLink>
