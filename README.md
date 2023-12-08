@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# HomeSync Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+HomeSync is a household management application designed to streamline task assignment and collaboration among house members. The application allows users to create a shared house, add members to it, and assign tasks to specific members. It promotes a more organized and collaborative approach to managing household responsibilities.
 
-In the project directory, you can run:
+### Technologies Used
+React: The frontend of the application is built using React, providing a dynamic and responsive user interface.
+Firebase: Firebase is utilized for authentication, real-time database storage, and cloud functions.
+React-Router: Implements navigation within the application, allowing users to move between different pages seamlessly.
+React-Notifications: Provides a clean and user-friendly way to display notifications to users.
 
-### `npm start`
+### Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**(1)App:** The main component that handles user authentication, routing, and serves as the entry point for the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="960" alt="Screenshot 2023-12-08 180800" src="https://github.com/dronv/homesync/assets/41694884/414f5ef7-b50b-4df7-9e3e-1ba00037da2b">
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**(2)MainScreen:** The main dashboard displaying a welcome message, the user's profile, and their associated house.
 
-### `npm run build`
+<img width="960" alt="Screenshot 2023-12-08 180818" src="https://github.com/dronv/homesync/assets/41694884/1a047ddb-12c3-4129-83c8-bb906c10732a">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**(3)CreateHouseForm:** Allows users to create a new house, checking if the user is already a member of a house.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="959" alt="Screenshot 2023-12-08 180832" src="https://github.com/dronv/homesync/assets/41694884/38e0fe86-9e30-405f-ba3d-050faf4ae37a">
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**(4)HouseholdMembers:** Displays and manages the list of household members, allowing users to add new members to their house.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="959" alt="Screenshot 2023-12-08 180841" src="https://github.com/dronv/homesync/assets/41694884/241926a2-2ab7-4e07-bc3f-8657e5f4bce3">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**(5)AddTaskForm:** Enables users to add tasks, specifying details, assigned member, and due date.
 
-## Learn More
+<img width="960" alt="Screenshot 2023-12-08 181038" src="https://github.com/dronv/homesync/assets/41694884/dadcd4dc-7870-40fd-a585-19fdda399094">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**(6)TaskList:** Displays the list of all the tasks added. 
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="960" alt="Screenshot 2023-12-08 181050" src="https://github.com/dronv/homesync/assets/41694884/d1fd3237-b104-460f-ab83-84f47c0e11ea">
