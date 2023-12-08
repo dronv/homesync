@@ -5,10 +5,10 @@
 HomeSync is a household management application designed to streamline task assignment and collaboration among house members. The application allows users to create a shared house, add members to it, and assign tasks to specific members. It promotes a more organized and collaborative approach to managing household responsibilities.
 
 ### Technologies Used
-React: The frontend of the application is built using React, providing a dynamic and responsive user interface.
-Firebase: Firebase is utilized for authentication, real-time database storage, and cloud functions.
-React-Router: Implements navigation within the application, allowing users to move between different pages seamlessly.
-React-Notifications: Provides a clean and user-friendly way to display notifications to users.
+**React:** The frontend of the application is built using React, providing a dynamic and responsive user interface.  
+**Firebase:** Firebase is utilized for authentication and firestore database storage.  
+**React-Router:** Implements navigation within the application, allowing users to move between different pages seamlessly.  
+**React-Notifications:** Provides a clean and user-friendly way to display notifications to users.  
 
 ### Project Structure
 
